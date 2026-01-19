@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff6f61;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e85b50;
+        }
+        .hidden {
+            display: none;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            margin: 10px 0;
+        }
+        .message {
+            font-size: 20px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="gameSection">
+        <h1>Mini Game First</h1>
+        <p>Guess the number between 1 and 5 to unlock your birthday wish.</p>
+        <input type="number" id="guess" min="1" max="5" placeholder="Enter your guess">
+        <br>
+        <button onclick="checkGuess()">Submit</button>
+        <p id="result"></p>
+    </div>
+
+    <div class="container hidden" id="wishSection">
+        <h1>Happy Birthday</h1>
+        <div class="message">
+            Wishing you a very Happy Birthday. 
+            May your life be filled with happiness, success, and good health.
+            Keep smiling and shining always.
+        </div>
+    </div>
+
+    <script>
+        const correctNumber = Math.floor(Math.random() * 5) + 1;
+
+        function checkGuess() {
+            const userGuess = Number(document.getElementById('guess').value);
+            const result = document.getElementById('result');
+
+            if (userGuess === correctNumber) {
+                document.getElementById('gameSection').classList.add('hidden');
+                document.getElementById('wishSection').classList.remove('hidden');
+            } else {
+                result.textContent = 'Wrong guess. Try again.';
+                result.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

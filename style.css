@@ -1,0 +1,134 @@
+ *{
+   margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white; 
+ }
+ body{
+    background-color: #09010d ;
+
+ }
+  #navbar{
+  padding: 27px 12px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+ }
+#navbar h1{
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 470px;
+}
+a{
+  text-decoration: none;
+}
+select{
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+
+}
+select:hover{
+  color: violet;
+}
+#navbar a{
+  margin: 13px;
+}
+#navbar a:hover {
+   color: violet;
+ }
+ #search{
+  margin-left: 8px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+ }
+
+#watchlist-container{
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap; /* naatako movie card lai arko line ma lagxa */  
+  justify-content: center;
+}
+
+.movie-card{
+    width:180px;
+    background-color:#0f0114;  /* dark violet box */
+  border-radius: 12px;        /* small round corners */
+  padding: 10px;              /*  box vitra space*/
+  margin : 10px;               /*  boxes ko space  */
+  margin-right: 18px;      /*boxes bichma gap*/
+
+}
+.movie-card img{
+    width: 180px;
+}
+.year{
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.modal {
+     display: none;
+    position: fixed;
+    padding-top: 60px; /*mathi gap rakhna*/
+    top: 0; /*kei nadekhina lai top ko*/
+    width: 100%;
+    height: 100%; /* tyo bg black huna lai */
+    background-color:black; 
+}
+.modal:target{
+  display:block;
+}
+.modal-content {
+  background-color:#09010d ;
+     margin: auto; /*center ma lyauna*/
+    padding: 20px;
+    max-width: 800px; /* bichma square shapebox banauna */
+    border-radius: 10px;  
+}
+.close-button {
+    float: right;
+    font-size: 35px;
+    color: #fff;
+}
+.close-button:hover {
+    color: #b37cff;
+}
+.modal-poster{
+  width: 180px;
+}
+.modal-header {
+    display: flex;
+    gap: 15px;
+    color: #e8d5f0; 
+}
+.modal-year{
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+.play{
+  border-radius: 50px;
+  background-color: #420459;
+  width: 95px;
+  text-align: center;
+}
+.detail-item {
+    margin: 8px ;
+    color: #e8d5f0;
+}
+.modal-body{
+  margin-top: 30px;
+  text-align: justify;
+}
+.opinion{
+  margin-top: 10px;
+}
+
+#footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+
+}

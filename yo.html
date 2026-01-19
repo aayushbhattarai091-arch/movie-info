@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>yoo</title>
+	<style>
+		body{
+			background-color: #09010d;
+			font-family: roboto,sans-serif;
+			color: white;
+		}
+		.modal{
+			display: none;
+			position: fixed;
+			top: 0;
+			background-color: black;
+
+		}
+		.modal:target{
+			display: block;
+		}
+		.modalcontent{
+			
+			margin: auto;
+			max-width: 800px;
+
+		}
+		.modalheader{
+			display: flex;
+			gap:15px;
+		}
+		.modalheader img{
+			width: 180px;
+		}
+	</style>
+</head>
+<body>
+	<div id="moviecard">
+		<a href="#superman">
+			<img src="images/superman.jpg">
+			<h3>Superman</h3>
+			<p>2025</p>
+		</a>
+	</div>
+	<div id="superman" class="modal">
+		<a href="#" class="closebutton">&times;</a>
+		<div class="modalcontent">
+			<div class="modalheader">
+				<img src="images/superman.jpg">
+				<div class="headertext">
+				<h3>Superman</h3>
+				<p>2025></p>
+				<p class="detail-item"><strong>Director:</strong> James Gunn</p>
+                                        <p class="detail-item"><strong>Starring:</strong> David Corenswet,Nicholas Hault,Rachel Brosnahan,....</p>
+                                        <p class="detail-item"><strong>Genre:</strong> Action, Adventure, Sci-Fi, Superhero</p>
+                                        <p class="detail-item"><strong>Duration:</strong> 2h 10m</p>
+                                        <p class="detail-item"><strong>IMDb Rating:</strong> 7.1/10</p>
+                                        <p class="detail-item"><strong>Language:</strong> English</p>
+                                    </div>
+			</div>
+			<div class="modalbody">
+				<h3>Synopis</h3>
+                        	<p>In a world facing new threats, Superman emerges as humanity’s greatest protector.He must navigate challenges that test his strength, morality, and resolve.As tensions rise, his actions inspire hope and fear in equal measure.Superman confronts forces that threaten both Earth and the values he stands for.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
